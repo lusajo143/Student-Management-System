@@ -15,6 +15,9 @@ System admin can do the following in the system
 3. Train machine learning model to be used in attendance taking
 4. Selecting and Saving a model with high performance
 
+
+![alt text](https://raw.githubusercontent.com/lusajo143/Student-Management-System/main/sams2.png)
+
 ### Instructors
 In the system instructor can start taking attendance and record the students attendance.
 
