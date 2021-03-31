@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="493.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.admin.Stdnt">
+<children>
+    <StackPane prefHeight="41.0" prefWidth="821.0">
+        <children>
+            <Label text="Add student" textFill="#838383">
+                <font>
+                    <Font name="Roboto Slab Bold" size="26.0" />
+                </font></Label>
+        </children>
+        <VBox.margin>
+            <Insets top="5.0" />
+        </VBox.margin>
+    </StackPane>
+    <StackPane prefHeight="520.0" prefWidth="821.0">
+        <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+                <children>
+                    <StackPane prefWidth="821.0">
+                        <children>
+                            <Label text="Fill required information below">
+                                <font>
+                                    <Font name="Roboto Slab Bold" size="13.0" />
+                                </font></Label>
+                        </children>
+                    </StackPane>
+                    <StackPane prefHeight="42.0" prefWidth="821.0">
+                        <children>
+                            <TextField fx:id="std_fname" maxWidth="-Infinity" prefWidth="450.0" promptText="First name" style="-fx-background-radius: 15; -fx-border-radius: 15;" />
+                        </children>
+                    </StackPane>
+                    <StackPane layoutX="10.0" layoutY="29.0" prefHeight="46.0" prefWidth="821.0">
+                        <children>
+                            <TextField fx:id="std_lname" maxWidth="-Infinity" prefWidth="450.0" promptText="Last name" style="-fx-background-radius: 15; -fx-border-radius: 15;" />
+                        </children>
+                    </StackPane>
+                    <StackPane layoutX="10.0" layoutY="71.0" prefHeight="46.0" prefWidth="821.0">
+                        <children>
+                            <TextField fx:id="std_course" maxWidth="-Infinity" prefWidth="450.0" promptText="Course" style="-fx-background-radius: 15; -fx-border-radius: 15;" />
+                        </children>
+                    </StackPane>
+                    <StackPane layoutX="10.0" layoutY="71.0" prefHeight="46.0" prefWidth="821.0">
+                        <children>
+                            <TextField fx:id="std_reg" maxWidth="-Infinity" prefWidth="450.0" promptText="T_UDOM_XXX_XXXXX" style="-fx-background-radius: 15; -fx-border-radius: 15;" />
+                        </children>
+                    </StackPane>
+                  <StackPane prefHeight="49.0" prefWidth="821.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#launch_cam" prefHeight="11.0" prefWidth="129.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Launch Camera">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="109.0" prefWidth="821.0">
+                     <children>
+                        <HBox maxWidth="-Infinity" prefHeight="116.0">
+                           <children>
+                              <Label fx:id="cent" text="0">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="10.0" text="\%">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+                    <StackPane prefHeight="51.0" prefWidth="821.0">
+                        <children>
+                            <Button mnemonicParsing="false" prefHeight="11.0" prefWidth="129.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Add">
+                                <font>
+                                    <Font name="Roboto Slab Bold" size="12.0" />
+                                </font>
+                                <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                </cursor>
+                            </Button>
+                        </children>
+                    </StackPane>
+                </children>
+            </VBox>
+        </children>
+    </StackPane>
+</children>
+</VBox>

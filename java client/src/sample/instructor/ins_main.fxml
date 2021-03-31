@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.instructor.InsMain">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="107.0" prefWidth="1000.0" style="-fx-background-color: #ffc69d;">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0">
+                     <children>
+                        <Label text="STUDENT ATTENDANCE" textFill="#d3732e">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="25.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="MANAGEMENT SYSTEM" textFill="#d3732e">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </StackPane>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="493.0" prefWidth="179.0" style="-fx-background-color: #e8e8e8;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="174.0" prefWidth="222.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/i.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </StackPane>
+            <VBox prefHeight="365.0" prefWidth="179.0" spacing="10.0">
+               <children>
+                  <StackPane prefHeight="0.0" prefWidth="159.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10;">
+                     <children>
+                        <Label text="Username">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="283.0" text="Attendance">
+                     <font>
+                        <Font name="Roboto Slab" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <effect>
+            <InnerShadow offsetY="2.0" radius="4.75" width="0.0">
+               <color>
+                  <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Attendance" textFill="#838383">
+               <font>
+                  <Font name="Roboto Slab Bold" size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <StackPane prefHeight="520.0" prefWidth="821.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="1000.0">
+                     <children>
+                        <Label text="To start taking attendance click Start button below.">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="attendance" mnemonicParsing="false" onAction="#start" prefHeight="11.0" prefWidth="129.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Start">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="100.0" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label text="Present Students">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Roboto Slab Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="326.0" prefWidth="801.0">
+                           <children>
+                              <TableView fx:id="table_present" maxWidth="-Infinity" prefHeight="326.0" prefWidth="500.0">
+                                <columns>
+                                  <TableColumn fx:id="column_present" maxWidth="1.7976931348623157E308" prefWidth="378.0" text="Registration Number" />
+                                   <TableColumn fx:id="column_acc" maxWidth="193.0" minWidth="122.0" prefWidth="122.0" text="Accuracy" />
+                                </columns>
+                              </TableView>
+                              <VBox prefHeight="326.0" prefWidth="298.0">
+                                 <children>
+                                    <StackPane prefHeight="326.0" prefWidth="259.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="111.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Save" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

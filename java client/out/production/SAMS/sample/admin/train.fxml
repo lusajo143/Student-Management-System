@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="493.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.admin.Train">
+
+    <children>
+        <StackPane prefHeight="41.0" prefWidth="821.0">
+            <children>
+                <Label text="Train" textFill="#838383">
+                    <font>
+                        <Font name="Roboto Slab Bold" size="26.0" />
+                    </font></Label>
+            </children>
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+        </StackPane>
+        <StackPane prefHeight="520.0" prefWidth="821.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <StackPane prefWidth="821.0">
+                            <children>
+                                <Label text="Click Start button to start training a model">
+                                    <font>
+                                        <Font name="Roboto Slab Bold" size="13.0" />
+                                    </font></Label>
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="49.0" prefWidth="821.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#train_" prefHeight="11.0" prefWidth="129.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Start">
+                                    <font>
+                                        <Font name="Roboto Slab Bold" size="12.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                        </StackPane>
+                  <StackPane fx:id="wait" prefWidth="200.0" style="-fx-background-color: #e8e8e8;" visible="false">
+                     <children>
+                        <Label text="Please wait ...">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <HBox prefHeight="121.0" prefWidth="821.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <children>
+                        <StackPane maxWidth="-Infinity" prefHeight="98.0" prefWidth="410.0">
+                           <children>
+                              <VBox maxWidth="-Infinity" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 15; -fx-border-radius: 15;">
+                                 <children>
+                                    <HBox prefWidth="380.0">
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="246.0" text="Current model">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="cur_date" layoutX="20.0" layoutY="20.0" text="                                 .">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefWidth="380.0">
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="311.0" text="Accuracy:">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="cur_acc" layoutX="20.0" layoutY="20.0" text="0.0000">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefWidth="380.0">
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="312.0" text="Loss:">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="cur_loss" layoutX="20.0" layoutY="20.0" text="0.0000">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" prefHeight="98.0" prefWidth="410.0">
+                           <children>
+                              <VBox maxWidth="-Infinity" prefHeight="200.0" prefWidth="380.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 15; -fx-border-radius: 15;">
+                                 <children>
+                                    <HBox prefWidth="380.0">
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="246.0" text="Results">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="res_date" layoutX="20.0" layoutY="20.0" prefHeight="19.0" text="                               .">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefWidth="380.0">
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="311.0" text="Accuracy:">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="res_acc" layoutX="20.0" layoutY="20.0" text="0.0000">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="49.0" prefWidth="380.0">
+                                       <children>
+                                          <Label prefHeight="19.0" prefWidth="312.0" text="Loss:">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="res_loss" layoutX="20.0" layoutY="20.0" text="0.0000">
+                                             <font>
+                                                <Font name="Roboto Slab Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <StackPane layoutX="10.0" layoutY="29.0" prefHeight="49.0" prefWidth="821.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#save_" prefHeight="11.0" prefWidth="129.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Save">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <Label fx:id="id" text="id" />
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+
+</VBox>

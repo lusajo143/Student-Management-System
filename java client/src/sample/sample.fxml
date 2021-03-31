@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="144.0" prefWidth="891.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="283.0" prefWidth="891.0" style="-fx-background-color: #ffc69d;">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0">
+                     <children>
+                        <Label text="STUDENT ATTENDANCE" textFill="#d3732e">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="40.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="MANAGEMENT SYSTEM" textFill="#d3732e">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </StackPane>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="348.0" prefWidth="523.0" style="-fx-background-color: cdcdcd; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <StackPane prefHeight="90.0" prefWidth="523.0">
+                     <children>
+                        <Label text="Login">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <TextField fx:id="username" prefHeight="50.0" prefWidth="483.0" promptText="Username" style="-fx-background-radius: 30; -fx-border-radius: 30;">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="483.0" promptText="Password" style="-fx-border-radius: 30; -fx-background-radius: 30;">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#done_" prefHeight="43.0" prefWidth="143.0" style="-fx-background-color: #6b6b6b; -fx-background-radius: 30; -fx-border-radius: 30;" text="Done" textFill="#dddddd">
+                           <font>
+                              <Font name="Roboto Slab Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.48627451062202454" green="0.48627451062202454" blue="0.48627451062202454" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </StackPane>
+               </children>
+               <effect>
+                  <DropShadow height="40.0" radius="19.5" width="40.0">
+                     <color>
+                        <Color red="0.2763157784938812" green="0.2763157784938812" blue="0.2763157784938812" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
